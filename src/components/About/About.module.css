@@ -60,10 +60,11 @@
    
 }
 
-.myInfo h4 {
-    margin-bottom:1em;
-    font-size: 1.5rem;
-    color: blueviolet;
+
+ .Name {
+   margin-bottom:1em;
+   font-size: 1.5rem;
+   color: blueviolet;
  }
 
  .myInfo h3 {

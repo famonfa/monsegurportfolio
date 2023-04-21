@@ -19,15 +19,14 @@ const About = () => {
             <div className={style.myInfo}>
                 <div className={style.headings}>
                 <div>
-                <h4>Who am i?</h4>
-                <h3>I am Facundo Monsegur, a visual UX/UI Designer and Front-End Developer</h3>
+                <h3>I am <span className={style.Name}>Facundo Monsegur</span>, a visual UX/UI Designer and Front-End Developer</h3>
                 </div>
                 <div className={style.Line}></div>
-                <p>I have been building noteworthy UX/UI designs and WordPress websites that comply with the latest design trends. Love To Create Dynamic and awesome WordPress responsive websites. I help convert a vision and an idea into meaningful and useful products.</p>
+                <p>As a web developer, I am passionate about creating websites that not only meet the latest design standards, but also deliver dynamic and responsive user experiences. My goal is to turn your vision and ideas into meaningful, useful products that meet your business goals and exceed your expectations.</p>
                 </div>
                 <div className={style.LineTwo}></div>
                 <div className={style.Information}>
-                    <p>monsegurFacundo@gmail.com</p>
+                    <p>monseguracundo@gmail.com</p>
                 </div>
                 <div className={style.Information}> 
                     <p>+549 11 3135 3193</p>
