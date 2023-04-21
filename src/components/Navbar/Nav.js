@@ -12,8 +12,8 @@ const Nav = ( { navigationBar, handleOpen, isMenuOpen } ) => {
         </div>
          <div>
             <ul onClick={handleOpen} className={style.Ulist}>
-                {navigationBar.map((navLi, key) => (
-                    <li><a key={key} href={navLi.url}>{navLi.name}</a></li>
+                {navigationBar.map((navLi, index) => (
+                    <li key={index}><a  href={navLi.url}>{navLi.name}</a></li>
                 ))}
             </ul>
         </div>

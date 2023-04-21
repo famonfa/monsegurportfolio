@@ -55,8 +55,8 @@ const Resume = () => {
         <div className={style.CardsWrapper}>
             <h2>Experience</h2>
             <div className={style.cardWrap}>
-                {experience.map((exp) => (
-                    <div className={style.CardExperience}>
+                {experience.map((exp, index) => (
+                    <div key={index} className={style.CardExperience}>
                     <h3>{exp.title}</h3>
                     <h5>{exp.company}</h5>
                     {exp.description.map((d) => (
