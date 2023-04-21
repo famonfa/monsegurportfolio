@@ -1,0 +1,99 @@
+.ProjectsWrapper {
+    width:100%;
+    min-height: 100vh;
+}
+
+.title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2em;
+
+}
+
+.title h1 {
+    font-family: 'FontNexa';
+    font-size: 2rem;
+    border-bottom: 2px solid blueviolet;
+}
+
+.Card {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    width: 20em;
+    border: 3em;
+    margin: 1em;
+    border-radius: 8px;
+}
+
+.CardBg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(138,43,226,0.2);
+}
+
+.ProjectsContainer {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+  
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.Card h3,
+.Card .Techs {
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.Card:hover h3,
+.Card:hover .Techs {
+    opacity: 1;
+}
+
+.Card h3 {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    font-size: 1.1rem;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.Card .Techs {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.Card .Techs span {
+    margin: 0 0.25rem;
+    font-size: 1.25rem;
+    color: #fff;
+}
+
+@media (max-width: 651px) {
+    .Card {
+       width: 15em;
+    }
+    .Card h3 {
+      font-size: 0.8rem;
+    }
+    .Card .Techs {
+       top:25%
+    }
+}

@@ -1,0 +1,146 @@
+.Navbar {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+   
+  
+    
+}
+
+.Ulist {
+    display: flex;
+
+}
+
+.Ulist li {
+    margin: 1em;
+    position: relative;
+    opacity: 0.7;
+    transition: all 0.1s;
+    font-family: "FontNexa";
+
+}
+
+.Ulist li:hover {
+    opacity: 1;
+}
+
+.Ulist li::before {
+    content: '';
+    position: absolute;
+    width: 0%;
+    bottom: -5px;
+    left: 0;
+    height: 5px;
+    transition: all 0.2s;
+    background-color: white;
+}
+
+.Ulist li:hover::before {
+    width: 100%
+}
+
+.MobileNav {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    transition: all 0.5s;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    animation: navbar-enter 0.8s ease forwards;
+    z-index: 99;
+}
+
+.Navbar .MobileNav-closed {
+    z-index: 99;
+    animation: navbar-exit 0.5s ease backwards;
+}
+
+
+.Burger {
+    cursor: pointer;
+    position: fixed;
+    right: 0;
+    top:0;
+    padding: 1em;
+    margin: 1em;
+    z-index: 99;
+}
+
+
+
+
+.Line {
+    width: 75%;
+    height: 1px;
+    opacity: 0.4;
+    background-color: white;
+}
+
+.lineWrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+}
+
+.NavbarWrapper {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+@keyframes navbar-enter {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes navbar-exit {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+}
+
+
+.Close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 2em;
+    cursor: pointer;
+}
+
+.closeIcon {
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+@media (max-width: 768px) {
+    .Navbar {
+        justify-content: space-between;
+        padding: 1em;
+    }
+
+    .Ulist {
+        flex-direction: column;
+    }
+}
