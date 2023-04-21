@@ -55,13 +55,13 @@ const Projects = () => {
         <div className={style.title}> 
              <h1>My projects</h1>
         </div>
-            {proj.map((pr) => (
-                <div className={style.Card}>
+            {proj.map((pr, index) => (
+                <div key={index} className={style.Card}>
                <div className={style.CardBg}></div>
             <Image src={pr.img} alt={pr.img}></Image>
                 <div className={style.Techs}>
-                    {pr.techs.map((tech) => (
-                        <div>
+                    {pr.techs.map((tech, index) => (
+                        <div key={index}>
                             <span >{tech}</span>
                         </div>
                     ))}
