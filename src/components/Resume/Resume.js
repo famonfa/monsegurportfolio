@@ -59,9 +59,9 @@ const Resume = () => {
                     <div key={index} className={style.CardExperience}>
                     <h3>{exp.title}</h3>
                     <h5>{exp.company}</h5>
-                    {exp.description.map((d) => (
-                        <ul>
-                        <li>{d}</li>
+                    {exp.description.map((d, index) => (
+                        <ul key={index}>
+                        <li >{d}</li>
                         </ul>
                     ))}
                     </div>
@@ -69,8 +69,8 @@ const Resume = () => {
             </div>
             <h2>Education</h2>
             <div className={style.cardWrap}>
-                {education.map((ed) => (
-                    <div className={style.CardEducation}>
+                {education.map((ed, index) => (
+                    <div key={index} className={style.CardEducation}>
                     <h3>{ed.title}</h3>
                     <h6>{ed.academy}</h6>
                     </div>

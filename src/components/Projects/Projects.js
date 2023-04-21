@@ -23,55 +23,54 @@ const Projects = () => {
             img:ameAgaru,
             url:'',
             techs: [
-                <SiReact/>,<SiExpress/>,  <SiPostgresql/>, <SiSequelize/> ]
+               {key: 1, icon:<SiReact/>},{key: 2, icon:<SiExpress/>}, {key: 3, icon: <SiPostgresql/>}, {key:4, icon:<SiSequelize/>} ]
             },
         {
             title: 'NintendoOldies - React Ecommerce',
             img:nintendoOldies,
             url:'https://nintendo-oldies.vercel.app/',
             techs: [
-                <SiReact/>, <IoLogoCss3/>, <IoLogoJavascript/> ]
+                {key:1 , icon:<SiReact/>}, {key:2, icon:<IoLogoCss3/>}, {key: 3, icon:<IoLogoJavascript/>} ]
         },
         {
             title: 'Restaurant - Vanilla Javascript Ecommerce',
             img:restaurant,
             url:'https://famonfa.github.io/tiendaRestoranJapones/',
             techs: [
-                <AiOutlineHtml5/>, <IoLogoCss3/>, <IoLogoJavascript/> ]
+                {key: 1, icon:<AiOutlineHtml5/>}, {key: 2, icon:<IoLogoCss3/>}, {key: 3, icon:<IoLogoJavascript/> }]
         },
         {
             title: 'To do list - React.js app',
             img:todo,
             url:'https://famonfa.github.io/todo-list/',
             techs: [
-                <SiReact/>, <IoLogoCss3/>, <IoLogoJavascript/> ]
+                {key: 1, icon:<SiReact/>}, {key: 2, icon:<IoLogoCss3/>}, {key: 3, icon:<IoLogoJavascript/>} ]
         },
-        ]
+    ];
 
-  return (
-    <div id='projects' className={style.ProjectsWrapper}>
-        
-        <div className={style.ProjectsContainer}>
-        <div className={style.title}> 
-             <h1>My projects</h1>
-        </div>
-            {proj.map((pr, index) => (
-                <div key={index} className={style.Card}>
-               <div className={style.CardBg}></div>
-            <Image src={pr.img} alt={pr.img}></Image>
-                <div className={style.Techs}>
-                    {pr.techs.map((tech, index) => (
-                        <div key={index}>
-                            <span >{tech}</span>
+    return (
+        <div id='projects' className={style.ProjectsWrapper}>
+            <div className={style.ProjectsContainer}>
+                <div className={style.title}> 
+                    <h1>My projects</h1>
+                </div>
+                {proj.map((pr, index) => (
+                    <div key={pr.title} className={style.Card}>
+                        <div className={style.CardBg}></div>
+                        <Image src={pr.img} alt={pr.img}></Image>
+                        <div className={style.Techs}>
+                            {pr.techs.map((tech, index) => (
+                                <div key={index}>
+                                    <span key={tech.key}>{tech.icon}</span>
+                                </div>
+                            ))}
                         </div>
-                    ))}
-                </div>
-                    <a target="_blank" href={pr.url}><h3>{pr.title}</h3></a>
-                </div>
-            ))}
+                        <a target="_blank" href={pr.url}><h3>{pr.title}</h3></a>
+                    </div>
+                ))}
+            </div>
         </div>
-    </div>
-  )
-}
+    )
+};
 
-export default Projects
+export default Projects;

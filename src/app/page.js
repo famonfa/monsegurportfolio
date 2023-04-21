@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div >
       
-      <Image className='fondo' src={fondo}></Image>
+      <Image className='fondo' src={fondo} alt='bg'></Image>
         <HomeInfo/>
   
 

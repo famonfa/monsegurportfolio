@@ -20,7 +20,7 @@ const About = () => {
                 <div className={style.headings}>
                 <div>
                 <h4>Who am i?</h4>
-                <h3>I'm Facundo Monsegur, a visual UX/UI Designer and Front-End Developer</h3>
+                <h3>I am Facundo Monsegur, a visual UX/UI Designer and Front-End Developer</h3>
                 </div>
                 <div className={style.Line}></div>
                 <p>I have been building noteworthy UX/UI designs and WordPress websites that comply with the latest design trends. Love To Create Dynamic and awesome WordPress responsive websites. I help convert a vision and an idea into meaningful and useful products.</p>
